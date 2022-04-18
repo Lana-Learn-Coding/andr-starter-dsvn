@@ -6,59 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <include
         android:id="@+id/header"
+        layout="@layout/header"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:background="#008ACB"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toTopOf="parent"
-        android:padding="10dp">
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:textColor="@color/white"
-            android:text="Đặt vé online"
-            android:textSize="18sp"
-            android:layout_gravity="center"/>
-
-       <LinearLayout
-           android:layout_gravity="center"
-           android:layout_weight="1"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:gravity="end">
-           <Space
-               android:layout_width="20dp"
-               android:layout_height="wrap_content" />
-           <Button
-               android:background="@drawable/btn_bg_circle"
-               android:layout_width="32dp"
-               android:layout_height="32dp"
-               android:contentDescription="icon"/>
-
-           <Space
-               android:layout_width="20dp"
-               android:layout_height="wrap_content" />
-           <Button
-               android:background="@drawable/btn_bg_circle"
-               android:layout_width="32dp"
-               android:layout_height="32dp"
-               android:contentDescription="icon"/>
-
-           <Space
-               android:layout_width="20dp"
-               android:layout_height="wrap_content" />
-           <Button
-               android:background="@drawable/btn_bg_circle"
-               android:layout_width="32dp"
-               android:layout_height="32dp"
-               android:contentDescription="icon"/>
-       </LinearLayout>
-    </LinearLayout>
+        android:layout_height="54dp"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -68,10 +21,10 @@
         app:layout_constraintTop_toBottomOf="@id/header">
 
         <LinearLayout
-            android:padding="15dp"
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp">
 
             <ImageView
                 android:layout_width="match_parent"
@@ -83,64 +36,56 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingHorizontal="5dp"
                 android:layout_marginBottom="20dp"
-                android:textStyle="bold"
-                android:textAlignment="center"
+                android:paddingHorizontal="5dp"
                 android:text="@string/title"
+                android:textAlignment="center"
+                android:textColor="#ff9800"
                 android:textSize="24sp"
-                android:textColor="#ff9800"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingHorizontal="5dp"
                 android:layout_marginBottom="15dp"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:text="@string/address" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:paddingHorizontal="5dp"
-                android:layout_marginBottom="15dp"
+                android:text="@string/address"
                 android:textColor="@color/black"
-                android:textSize="18sp"
-                android:text="@string/contact" />
+                android:textSize="18sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingHorizontal="5dp"
                 android:layout_marginBottom="15dp"
+                android:paddingHorizontal="5dp"
+                android:text="@string/contact"
                 android:textColor="@color/black"
-                android:textSize="18sp"
-                android:text="@string/cert" />
+                android:textSize="18sp" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingHorizontal="5dp"
                 android:layout_marginBottom="15dp"
+                android:paddingHorizontal="5dp"
+                android:text="@string/cert"
                 android:textColor="@color/black"
-                android:textSize="18sp"
-                android:text="@string/business_code" />
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:paddingHorizontal="5dp"
+                android:text="@string/business_code"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
         </LinearLayout>
     </ScrollView>
 
-    <LinearLayout
+    <include
         android:id="@+id/footer"
+        layout="@layout/footer"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:background="#008ACB"
-        android:gravity="center"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Giờ tàu | Khuyến mại | Quy định | Hướng dẫn"
-            android:textColor="@color/white"
-            android:textSize="18sp" />
-    </LinearLayout>
+        android:layout_height="54dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
