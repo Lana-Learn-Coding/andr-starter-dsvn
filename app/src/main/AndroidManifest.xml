@@ -19,8 +19,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:exported="false" />
+            android:name=".ServiceActivity"
+            android:exported="false"/>
     </application>
 
 </manifest>
