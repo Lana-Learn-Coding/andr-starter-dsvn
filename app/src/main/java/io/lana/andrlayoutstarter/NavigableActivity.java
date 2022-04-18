@@ -22,5 +22,6 @@ public class NavigableActivity extends AppCompatActivity {
     protected void setupNavigation() {
         findButtonById(R.id.button_home).setOnClickListener(navigate(this, MainActivity.class));
         findButtonById(R.id.button_service).setOnClickListener(navigate(this, ServiceActivity.class));
+        findButtonById(R.id.button_form).setOnClickListener(navigate(this, FormActivity.class));
     }
 }
