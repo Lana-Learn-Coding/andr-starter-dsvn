@@ -28,6 +28,7 @@
             android:layout_height="wrap_content" />
 
         <Button
+            android:id="@+id/button_home"
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:background="@drawable/btn_bg_circle"
@@ -38,6 +39,7 @@
             android:layout_height="wrap_content" />
 
         <Button
+            android:id="@+id/button_service"
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:background="@drawable/btn_bg_circle"
@@ -48,6 +50,7 @@
             android:layout_height="wrap_content" />
 
         <Button
+            android:id="@+id/button_form"
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:background="@drawable/btn_bg_circle"
