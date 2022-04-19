@@ -31,7 +31,7 @@
             android:id="@+id/button_home"
             android:layout_width="32dp"
             android:layout_height="32dp"
-            android:background="@drawable/btn_bg_circle"
+            android:background="@drawable/ic_home"
             android:contentDescription="icon" />
 
         <Space
@@ -42,7 +42,7 @@
             android:id="@+id/button_service"
             android:layout_width="32dp"
             android:layout_height="32dp"
-            android:background="@drawable/btn_bg_circle"
+            android:background="@drawable/ic_service"
             android:contentDescription="icon" />
 
         <Space
@@ -53,7 +53,7 @@
             android:id="@+id/button_form"
             android:layout_width="32dp"
             android:layout_height="32dp"
-            android:background="@drawable/btn_bg_circle"
+            android:background="@drawable/ic_booking"
             android:contentDescription="icon" />
     </LinearLayout>
 </LinearLayout>
