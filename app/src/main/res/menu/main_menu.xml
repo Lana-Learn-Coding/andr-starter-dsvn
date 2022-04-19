@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menuitem_home"
+        android:icon="@drawable/ic_home"
+        android:title="Trang chủ"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menuitem_service"
+        android:icon="@drawable/ic_service"
+        android:title="Dịch vụ"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menuitem_booking"
+        android:icon="@drawable/ic_booking"
+        android:title="Đặt vé"
+        app:showAsAction="ifRoom" />
+</menu>

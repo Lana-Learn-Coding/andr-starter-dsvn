@@ -22,7 +22,6 @@ public class FormActivity extends NavigableActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form);
-        setupNavigation();
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, CITIES);
         ((AutoCompleteTextView) findViewById(R.id.autocomplete_from)).setAdapter(adapter);
