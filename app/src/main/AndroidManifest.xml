@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ServiceActivity"
+            android:name=".service.ServiceActivity"
             android:exported="false" />
     </application>
 

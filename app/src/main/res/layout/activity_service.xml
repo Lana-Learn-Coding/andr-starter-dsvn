@@ -4,214 +4,161 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ServiceActivity">
+    tools:context=".service.ServiceActivity">
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="20dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="15dp"
         app:layout_constraintBottom_toTopOf="@id/footer"
         app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
+        <GridLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:orientation="vertical"
-            android:padding="15dp">
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:useDefaultMargins="true">
 
-            <GridLayout
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:columnCount="2"
-                android:useDefaultMargins="true">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_columnSpan="2"
-                    android:layout_marginBottom="15dp"
-                    android:paddingHorizontal="5dp"
-                    android:text="@string/service"
-                    android:textAlignment="center"
-                    android:textColor="@color/orange"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_column="0"
-                    android:layout_columnWeight="1"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="120dp"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/img_dulich" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_columnWeight="1"
-                        android:text="@string/service_travel"
-                        android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_column="1"
-                    android:layout_columnWeight="1"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="120dp"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/img_caotoc" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_columnWeight="1"
-                        android:text="@string/service_train"
-                        android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_column="0"
-                    android:layout_columnWeight="1"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="120dp"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/img_suachua" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_columnWeight="1"
-                        android:text="@string/service_fix"
-                        android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_column="1"
-                    android:layout_columnWeight="1"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="120dp"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/img_luukho" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_columnWeight="1"
-                        android:text="@string/service_storage"
-                        android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
-                </LinearLayout>
-            </GridLayout>
+                android:layout_columnSpan="2"
+                android:layout_marginBottom="15dp"
+                android:paddingHorizontal="5dp"
+                android:text="@string/service"
+                android:textAlignment="center"
+                android:textColor="@color/orange"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:layout_weight="3"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
                 android:orientation="vertical">
 
-                <View
+                <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="3dp"
-                    android:background="?android:attr/listDivider" />
+                    android:layout_height="120dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/img_dulich" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginVertical="15dp"
-                    android:paddingHorizontal="5dp"
-                    android:text="@string/news"
+                    android:layout_columnWeight="1"
+                    android:text="@string/service_travel"
                     android:textAlignment="center"
-                    android:textColor="@color/orange"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="3dp"
-                    android:background="?android:attr/listDivider" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:paddingHorizontal="5dp">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="5dp"
-                        android:text="@string/news_lorem_title"
-                        android:textColor="@color/link"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="5dp"
-                        android:text="@string/news_lorem_content"
-                        android:textSize="18sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:paddingHorizontal="5dp">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="5dp"
-                        android:text="@string/news_lorem_title"
-                        android:textColor="@color/link"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="5dp"
-                        android:text="@string/news_lorem_content"
-                        android:textSize="18sp" />
-                </LinearLayout>
-
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/img_caotoc" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="@string/service_train"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/img_suachua" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="@string/service_fix"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/img_luukho" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="@string/service_storage"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </GridLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="15dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="15dp"
+                android:paddingHorizontal="5dp"
+                android:text="@string/news"
+                android:textAlignment="center"
+                android:textColor="@color/orange"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="?android:attr/listDivider" />
+
+            <ListView
+                android:id="@+id/list_news"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
         </LinearLayout>
-    </ScrollView>
+    </LinearLayout>
 
     <include
         android:id="@+id/footer"

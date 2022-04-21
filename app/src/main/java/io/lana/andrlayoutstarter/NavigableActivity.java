@@ -19,6 +19,8 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 
+import io.lana.andrlayoutstarter.service.ServiceActivity;
+
 public class NavigableActivity extends AppCompatActivity {
     protected void navigate(Context context, Class<?> target) {
         startActivity(new Intent(context, target));
