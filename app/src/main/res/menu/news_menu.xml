@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/item_hide"
+        android:title="Ẩn" />
+    <item
+        android:id="@+id/item_watch"
+        android:title="Xem" />
+    <item
+        android:id="@+id/item_view_all"
+        android:title="Xem tất cả" />
+</menu>
