@@ -13,10 +13,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import java.util.Collection;
 import java.util.List;
 
-import io.lana.andrlayoutstarter.FormActivity;
 import io.lana.andrlayoutstarter.R;
 
 public class NewAdapter extends ArrayAdapter<New> {
@@ -39,10 +37,11 @@ public class NewAdapter extends ArrayAdapter<New> {
 
         TextView textContent = convertView.findViewById(R.id.content);
         TextView textTitle = convertView.findViewById(R.id.title);
-        if (textTitle != null) textTitle.setText(item.getTitle());
-        if (textContent != null) textContent.setText(item.getContent());
+        if (textTitle == null || textContent == null) return convertView;
 
-        convertView.setOnLongClickListener(view -> {
+        textContent.setText(item.getContent());
+        textTitle.setText(item.getTitle());
+        textTitle.setOnClickListener(view -> {
             Context context = getContext();
 
             PopupMenu popupMenu = new PopupMenu(context, view);
@@ -58,7 +57,6 @@ public class NewAdapter extends ArrayAdapter<New> {
                 return true;
             });
             popupMenu.show();
-            return true;
         });
 
         return convertView;
