@@ -24,4 +24,6 @@
     <string name="service_storage">Kho bãi</string>
 
     <string name="news">Tin tức</string>
+    <string name="news_lorem_title">Tàu chất lượng cao vận tải Hà Nội</string>
+    <string name="news_lorem_content">Một thực tế đã có từ lâu rằng người đọc sẽ bị phân tâm bởi nội dung có thể đọc được của một trang khi nhìn vào bố cục của nó. Điểm đáng chú ý của việc sử dụng Lorem Ipsum là nó có sự phân bố các chữ cái bình thường ít nhiều, trái ngược với việc sử dụng \'Nội dung ở đây, nội dung ở đây\', khiến nó trông giống như tiếng Anh có thể đọc được.</string>
 </resources>
