@@ -15,7 +15,6 @@ import io.lana.andrlayoutstarter.service.ServiceActivity;
 public class NavigableActivity extends AppCompatActivity {
     protected void navigate(Context context, Class<?> target) {
         startActivity(new Intent(context, target));
-        finish();
     }
 
     @Override
