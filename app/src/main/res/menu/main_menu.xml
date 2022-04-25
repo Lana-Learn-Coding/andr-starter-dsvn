@@ -5,15 +5,20 @@
         android:id="@+id/menuitem_home"
         android:icon="@drawable/ic_home"
         android:title="Trang chủ"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="always" />
     <item
         android:id="@+id/menuitem_service"
         android:icon="@drawable/ic_service"
         android:title="Dịch vụ"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="always" />
     <item
         android:id="@+id/menuitem_booking"
         android:icon="@drawable/ic_booking"
         android:title="Đặt vé"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menuitem_news"
+        android:title="Tin tức"
+        app:showAsAction="collapseActionView" />
 </menu>

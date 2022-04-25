@@ -5,20 +5,11 @@ import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.material.datepicker.MaterialDatePicker;
-
-import java.time.Instant;
-import java.time.LocalDate;
-import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
-
+import io.lana.andrlayoutstarter.service.NewActivity;
 import io.lana.andrlayoutstarter.service.ServiceActivity;
 
 public class NavigableActivity extends AppCompatActivity {
@@ -50,6 +41,10 @@ public class NavigableActivity extends AppCompatActivity {
         if (id == R.id.menuitem_service) {
             navigate(this, ServiceActivity.class);
             return true;
+        }
+
+        if (id == R.id.menuitem_news) {
+            navigate(this, NewActivity.class);
         }
 
         return false;
