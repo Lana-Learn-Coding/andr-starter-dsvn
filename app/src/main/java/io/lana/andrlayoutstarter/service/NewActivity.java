@@ -11,6 +11,8 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
+import com.github.javafaker.Faker;
+
 import java.util.ArrayList;
 
 import io.lana.andrlayoutstarter.NavigableActivity;
@@ -26,7 +28,7 @@ public class NewActivity extends NavigableActivity {
 
         adapter = new NewAdapter(this, new ArrayList<>());
         for (int i = 0; i < 10; i++) {
-            adapter.add(new New(getString(R.string.news_lorem_title), getString(R.string.news_lorem_content)));
+            adapter.add(new New(Faker.instance().book().title(), Faker.instance().lorem().paragraph()));
         }
         ListView listNews = findViewById(R.id.list_news);
         listNews.setAdapter(adapter);

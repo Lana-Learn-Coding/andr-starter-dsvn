@@ -3,6 +3,8 @@ package io.lana.andrlayoutstarter.service;
 import android.os.Bundle;
 import android.widget.ListView;
 
+import com.github.javafaker.Faker;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,9 +20,9 @@ public class ServiceActivity extends NavigableActivity {
         setContentView(R.layout.activity_service);
 
 
-        news.add(new New(getString(R.string.news_lorem_title), getString(R.string.news_lorem_content)));
-        news.add(new New(getString(R.string.news_lorem_title), getString(R.string.news_lorem_content)));
-        news.add(new New(getString(R.string.news_lorem_title), getString(R.string.news_lorem_content)));
+        news.add(new New(Faker.instance().book().title(), Faker.instance().chuckNorris().fact()));
+        news.add(new New(Faker.instance().book().title(), Faker.instance().chuckNorris().fact()));
+        news.add(new New(Faker.instance().book().title(), Faker.instance().chuckNorris().fact()));
         ListView listNews = findViewById(R.id.list_news);
         listNews.setAdapter(new NewAdapter(this, news));
     }
