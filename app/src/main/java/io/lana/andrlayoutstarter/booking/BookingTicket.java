@@ -3,6 +3,8 @@ package io.lana.andrlayoutstarter.booking;
 import java.time.LocalDate;
 
 public class BookingTicket {
+    private String id;
+
     private String name;
 
     private String phone;
@@ -20,6 +22,14 @@ public class BookingTicket {
     private int peopleCount;
 
     private int childrenCount;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;

@@ -7,6 +7,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import com.github.javafaker.Faker;
 import com.google.android.material.datepicker.MaterialDatePicker;
 import com.google.android.material.textfield.TextInputEditText;
 
@@ -57,6 +58,7 @@ public class FormActivity extends NavigableActivity {
 
     private void saveForm(View view) {
         BookingTicket ticket = new BookingTicket();
+        ticket.setId("DSVN" + Faker.instance().number().digits(8));
         ticket.setName(FormUtils.getTextValue(findViewById(R.id.txt_name)));
         ticket.setPhone(FormUtils.getTextValue(findViewById(R.id.txt_phone)));
 
