@@ -3,17 +3,16 @@ package io.lana.andrlayoutstarter.booking;
 import android.os.Bundle;
 import android.widget.ListView;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.github.javafaker.Faker;
 
 import java.time.ZoneId;
 import java.util.concurrent.TimeUnit;
 
 import io.lana.andrlayoutstarter.MainApplication;
+import io.lana.andrlayoutstarter.NavigableActivity;
 import io.lana.andrlayoutstarter.R;
 
-public class BookingHistoryActivity extends AppCompatActivity {
+public class BookingHistoryActivity extends NavigableActivity {
     private BookingHistoryAdapter adapter;
 
     @Override
