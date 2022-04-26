@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndrLayoutStarter">
         <activity
+            android:name=".booking.BookingHistoryActivity"
+            android:exported="false" />
+        <activity
             android:name=".service.NewActivity"
             android:exported="false" />
         <activity

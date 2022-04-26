@@ -78,7 +78,8 @@ public class FormActivity extends NavigableActivity {
         }
 
         MainApplication app = (MainApplication) getApplicationContext();
-        app.getTickets().add(ticket);
+        app.getTickets().add(0, ticket);
+        navigate(this, BookingHistoryActivity.class);
         Toast.makeText(this, "Đặt vé thành công", Toast.LENGTH_SHORT).show();
     }
 }

@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import io.lana.andrlayoutstarter.booking.BookingHistoryActivity;
 import io.lana.andrlayoutstarter.booking.FormActivity;
 import io.lana.andrlayoutstarter.service.NewActivity;
 import io.lana.andrlayoutstarter.service.ServiceActivity;
@@ -46,6 +47,10 @@ public class NavigableActivity extends AppCompatActivity {
 
         if (id == R.id.menuitem_news) {
             navigate(this, NewActivity.class);
+        }
+
+        if (id == R.id.menuitem_booking_history) {
+            navigate(this, BookingHistoryActivity.class);
         }
 
         return false;

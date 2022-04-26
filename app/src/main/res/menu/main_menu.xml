@@ -19,6 +19,11 @@
 
     <item
         android:id="@+id/menuitem_news"
-        android:title="Tin tức"
+        android:title="@string/news"
+        app:showAsAction="collapseActionView" />
+
+    <item
+        android:id="@+id/menuitem_booking_history"
+        android:title="@string/booking_history"
         app:showAsAction="collapseActionView" />
 </menu>
