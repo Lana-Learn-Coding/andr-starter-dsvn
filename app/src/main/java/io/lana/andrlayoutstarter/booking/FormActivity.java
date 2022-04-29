@@ -17,15 +17,19 @@ import java.time.ZoneId;
 
 import io.lana.andrlayoutstarter.FormUtils;
 import io.lana.andrlayoutstarter.MainApplication;
+import io.lana.andrlayoutstarter.db.MainDatabase;
 import io.lana.andrlayoutstarter.NavigableActivity;
 import io.lana.andrlayoutstarter.R;
 
 public class FormActivity extends NavigableActivity {
+    private BookingDao bookingDao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form);
+
+        bookingDao = MainDatabase.getDbInstance(this).bookingDao();
 
         MainApplication application = (MainApplication) getApplicationContext();
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, application.getCities());
@@ -57,8 +61,7 @@ public class FormActivity extends NavigableActivity {
     }
 
     private void saveForm(View view) {
-        BookingTicket ticket = new BookingTicket();
-        ticket.setId("DSVN" + Faker.instance().number().digits(8));
+        BookingTicket ticket = new BookingTicket("DSVN" + Faker.instance().number().digits(8));
         ticket.setName(FormUtils.getTextValue(findViewById(R.id.txt_name)));
         ticket.setPhone(FormUtils.getTextValue(findViewById(R.id.txt_phone)));
 
@@ -77,8 +80,7 @@ public class FormActivity extends NavigableActivity {
             return;
         }
 
-        MainApplication app = (MainApplication) getApplicationContext();
-        app.getTickets().add(0, ticket);
+        bookingDao.insert(ticket);
         navigate(this, BookingHistoryActivity.class);
         Toast.makeText(this, "Đặt vé thành công", Toast.LENGTH_SHORT).show();
     }

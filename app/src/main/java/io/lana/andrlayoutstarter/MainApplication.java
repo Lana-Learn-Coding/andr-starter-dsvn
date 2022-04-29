@@ -14,8 +14,6 @@ public class MainApplication extends Application {
         add("Mỹ");
     }};
 
-    private final List<BookingTicket> tickets = new ArrayList<>();
-
     @Override
     public void onCreate() {
         super.onCreate();
@@ -23,9 +21,5 @@ public class MainApplication extends Application {
 
     public List<String> getCities() {
         return cities;
-    }
-
-    public List<BookingTicket> getTickets() {
-        return tickets;
     }
 }

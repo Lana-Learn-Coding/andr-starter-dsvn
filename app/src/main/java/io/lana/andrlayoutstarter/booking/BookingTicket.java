@@ -1,8 +1,15 @@
 package io.lana.andrlayoutstarter.booking;
 
+import androidx.annotation.NonNull;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
 import java.time.LocalDate;
 
+@Entity(tableName = "booking")
 public class BookingTicket {
+    @NonNull
+    @PrimaryKey
     private String id;
 
     private String name;
@@ -23,6 +30,11 @@ public class BookingTicket {
 
     private int childrenCount;
 
+    public BookingTicket(@NonNull String id) {
+        this.id = id;
+    }
+
+    @NonNull
     public String getId() {
         return id;
     }
