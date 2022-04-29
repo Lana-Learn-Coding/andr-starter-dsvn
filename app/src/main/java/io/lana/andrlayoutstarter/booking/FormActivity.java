@@ -14,6 +14,7 @@ import com.google.android.material.textfield.TextInputEditText;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.ZoneId;
+import java.util.concurrent.Executors;
 
 import io.lana.andrlayoutstarter.FormUtils;
 import io.lana.andrlayoutstarter.MainApplication;
@@ -80,8 +81,12 @@ public class FormActivity extends NavigableActivity {
             return;
         }
 
-        bookingDao.insert(ticket);
-        navigate(this, BookingHistoryActivity.class);
-        Toast.makeText(this, "Đặt vé thành công", Toast.LENGTH_SHORT).show();
+        Executors.newSingleThreadExecutor().execute(() -> {
+            bookingDao.insert(ticket);
+            runOnUiThread(() -> {
+                navigate(this, BookingHistoryActivity.class);
+                Toast.makeText(this, "Đặt vé thành công", Toast.LENGTH_SHORT).show();
+            });
+        });
     }
 }

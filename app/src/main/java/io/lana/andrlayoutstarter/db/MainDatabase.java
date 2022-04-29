@@ -18,8 +18,6 @@ public abstract class MainDatabase extends RoomDatabase {
     public abstract BookingDao bookingDao();
 
     public static MainDatabase getDbInstance(Context context) {
-        return Room.databaseBuilder(context, MainDatabase.class, DBNAME)
-                .allowMainThreadQueries()
-                .build();
+        return Room.databaseBuilder(context, MainDatabase.class, DBNAME).build();
     }
 }
