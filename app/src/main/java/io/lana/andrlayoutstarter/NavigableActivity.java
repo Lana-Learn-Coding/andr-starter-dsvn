@@ -47,10 +47,12 @@ public class NavigableActivity extends AppCompatActivity {
 
         if (id == R.id.menuitem_news) {
             navigate(this, NewActivity.class);
+            return true;
         }
 
         if (id == R.id.menuitem_booking_history) {
             navigate(this, BookingHistoryActivity.class);
+            return true;
         }
 
         return false;
