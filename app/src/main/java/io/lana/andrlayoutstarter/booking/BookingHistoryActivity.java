@@ -1,18 +1,15 @@
 package io.lana.andrlayoutstarter.booking;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import io.lana.andrlayoutstarter.db.MainDatabase;
 import io.lana.andrlayoutstarter.NavigableActivity;
 import io.lana.andrlayoutstarter.R;
+import io.lana.andrlayoutstarter.db.MainDatabase;
 
 public class BookingHistoryActivity extends NavigableActivity {
     private BookingHistoryAdapter adapter;
@@ -37,11 +34,13 @@ public class BookingHistoryActivity extends NavigableActivity {
     }
 
     private void loadData() {
-        Log.i("load", "start load");
         Executors.newSingleThreadExecutor().execute(() -> {
-            adapter.clear();
-            adapter.addAll(bookingDao.getAllBooking());
-            runOnUiThread(() -> adapter.notifyDataSetChanged());
+            List<BookingTicket> histories = bookingDao.getAllBooking();
+            runOnUiThread(() -> {
+                adapter.clear();
+                adapter.addAll(histories);
+                adapter.notifyDataSetChanged();
+            });
         });
     }
 }
