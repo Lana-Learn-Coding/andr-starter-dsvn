@@ -26,4 +26,5 @@
     <string name="news">Tin tức</string>
     <string name="ticket_code">Mã vé</string>
     <string name="booking_history">Vé đã đặt</string>
+    <string name="search">Tìm kiếm</string>
 </resources>

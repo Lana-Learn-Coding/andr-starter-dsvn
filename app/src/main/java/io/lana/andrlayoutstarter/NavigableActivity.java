@@ -8,9 +8,11 @@ import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 
 import io.lana.andrlayoutstarter.booking.BookingHistoryActivity;
 import io.lana.andrlayoutstarter.booking.FormActivity;
+import io.lana.andrlayoutstarter.booking.SearchDialogFragment;
 import io.lana.andrlayoutstarter.service.NewActivity;
 import io.lana.andrlayoutstarter.service.ServiceActivity;
 
@@ -52,6 +54,12 @@ public class NavigableActivity extends AppCompatActivity {
 
         if (id == R.id.menuitem_booking_history) {
             navigate(this, BookingHistoryActivity.class);
+            return true;
+        }
+
+        if (id == R.id.menuitem_search) {
+            DialogFragment dialogFragment = new SearchDialogFragment();
+            dialogFragment.show(getSupportFragmentManager(), "history_search");
             return true;
         }
 

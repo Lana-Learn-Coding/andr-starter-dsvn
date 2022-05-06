@@ -26,4 +26,9 @@
         android:id="@+id/menuitem_booking_history"
         android:title="@string/booking_history"
         app:showAsAction="collapseActionView" />
+
+    <item
+        android:id="@+id/menuitem_search"
+        android:title="@string/search"
+        app:showAsAction="collapseActionView" />
 </menu>
