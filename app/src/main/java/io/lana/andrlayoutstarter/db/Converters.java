@@ -30,6 +30,9 @@ public class Converters {
 
     @TypeConverter
     public static Long localDateToTimestamp(LocalDate date) {
+        if (date == null) {
+            return null;
+        }
         return localDateTimeToTimestamp(date.atStartOfDay());
     }
 

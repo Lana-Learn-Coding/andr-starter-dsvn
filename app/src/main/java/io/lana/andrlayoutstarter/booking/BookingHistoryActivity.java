@@ -1,7 +1,10 @@
 package io.lana.andrlayoutstarter.booking;
 
+import static android.content.ContentValues.TAG;
+
 import android.app.AlertDialog;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.ContextMenu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -12,10 +15,15 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
+import org.apache.commons.lang3.ObjectUtils;
+import org.apache.commons.lang3.StringUtils;
+
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Executors;
 
+import io.lana.andrlayoutstarter.FormUtils;
 import io.lana.andrlayoutstarter.NavigableActivity;
 import io.lana.andrlayoutstarter.R;
 import io.lana.andrlayoutstarter.db.MainDatabase;
@@ -85,8 +93,15 @@ public class BookingHistoryActivity extends NavigableActivity {
     }
 
     private void loadData() {
+        Bundle extras = ObjectUtils.defaultIfNull(getIntent().getExtras(), new Bundle());
         Executors.newSingleThreadExecutor().execute(() -> {
-            List<BookingTicket> histories = bookingDao.getAllBooking();
+            String term = StringUtils.defaultIfBlank(extras.getString("term"), "");
+
+            LocalDate date = StringUtils.isNotBlank(extras.getString("date"))
+                    ? LocalDate.parse(extras.getString("date"), FormUtils.SIMPLE_DATE_FORMAT)
+                    : null;
+
+            List<BookingTicket> histories = bookingDao.getBooking("%" + term + "%", date);
             runOnUiThread(() -> {
                 adapter.clear();
                 adapter.addAll(histories);
