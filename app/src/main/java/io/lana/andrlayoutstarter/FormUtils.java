@@ -20,6 +20,11 @@ public class FormUtils {
         return textView.getText().toString();
     }
 
+    public static void setTextValue(TextView textView, String text) {
+        if (Objects.isNull(textView)) return;
+        textView.setText(text);
+    }
+
     public static LocalDate getTextDate(TextView textView, DateTimeFormatter formatter) {
         String text = getTextValue(textView);
         if (StringUtils.isBlank(text)) return null;

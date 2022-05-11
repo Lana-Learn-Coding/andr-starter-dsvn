@@ -3,6 +3,7 @@ package io.lana.andrlayoutstarter.booking;
 import static android.content.ContentValues.TAG;
 
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.ContextMenu;
@@ -64,31 +65,33 @@ public class BookingHistoryActivity extends NavigableActivity {
     @Override
     public boolean onContextItemSelected(@NonNull MenuItem menuItem) {
         int id = menuItem.getItemId();
-        if (id == R.id.item_view_all) {
-            navigate(this, NewActivity.class);
-            return true;
-        }
-
         int pos = ((AdapterView.AdapterContextMenuInfo) menuItem.getMenuInfo()).position;
         BookingTicket item = adapter.getItem(pos);
+
+        if (id == R.id.item_edit) {
+            Intent intent = new Intent(this, FormActivity.class);
+            intent.putExtra("id", item.getId());
+            startActivity(intent);
+            finish();
+        }
+
         if (id == R.id.item_delete) {
             new AlertDialog.Builder(this)
-                    .setMessage("Are you sure delete?")
-                    .setPositiveButton("Yes", (dialog, which) -> {
+                    .setMessage("Bạn có chắc muốn hủy vé này")
+                    .setPositiveButton("Chắc", (dialog, which) -> {
                         Executors.newSingleThreadExecutor().execute(() -> {
                             bookingDao.delete(item);
                             runOnUiThread(() -> {
                                 adapter.remove(item);
                                 adapter.notifyDataSetChanged();
+                                Toast.makeText(this, "Hủy vé " + item.getId(), Toast.LENGTH_SHORT).show();
                             });
                         });
                     })
-                    .setNegativeButton("Cancel", (dialog, which) -> Toast.makeText(this, "Cancelled", Toast.LENGTH_SHORT).show())
+                    .setNegativeButton("Trở lại", (dialog, which) -> Toast.makeText(this, "Giữ lại vé này", Toast.LENGTH_SHORT).show())
                     .show();
-            return true;
         }
 
-        Toast.makeText(this, "Update", Toast.LENGTH_SHORT).show();
         return true;
     }
 

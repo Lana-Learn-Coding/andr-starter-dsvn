@@ -7,6 +7,7 @@
     <string name="business_code">Mã số doanh nghiệp: 0100105052, đăng ký lần đầu ngày 26/07/2010 đăng ký thay đổi lần 4 ngày 27/06/2014 tại Sở KHĐT Thành phố Hà Nội</string>
 
     <string name="book">Đặt vé</string>
+    <string name="update_book">Cập nhật vé</string>
     <string name="booking">Đặt vé tàu</string>
     <string name="field_name">Họ và tên</string>
     <string name="field_phone">Số điện thoại</string>
